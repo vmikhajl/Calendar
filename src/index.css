@@ -7,7 +7,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+button:active, button:focus{
+  border: none;
+  outline: none;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -30,14 +33,17 @@ code {
   color: white;
   text-align: center;
 }
-.calendar__table{
-  max-width:  1300px;
+.calendar__table {
+  max-width: 1300px;
   background-color: rgba(0, 0, 0, 0.16);
   margin: 0 auto;
 }
+.calendar__today{
+  outline: rgba(0, 0, 0, 0.55) 2px solid;
+}
 .calendar__menu{
   max-width:  1300px;
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.55);
   margin: 0 auto;
   height: 50px;
   display: flex;
@@ -55,7 +61,32 @@ code {
   top:0;
   left: 3px;
 }
+
+.menu__current-date--btn{
+  color: white;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 25px;
+}
 tbody{
 
   cursor: pointer;
 }
+.menu__current-date{
+  width: 120px;
+
+  text-align: center;
+  color: white;
+}
+.menu__today-btn{
+  background-color: rgba(84, 255, 100, 0.64);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  width: 90px;
+  height: 25px;
+  cursor: pointer;
+}
+

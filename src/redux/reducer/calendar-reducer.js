@@ -4,16 +4,20 @@ const NEXT_MONTH = 'NEXT_MONTH';
 
 let fillCalendar = (year, month) => {
     let tr = [];
-    console.log(year, month);
     let currentDate = new Date(year, month);
     let next = new Date(year,month + 1);
     let diff = (next - currentDate) / (1000 * 3600 * 24);
     let index = (currentDate.getDay() + 6) % 7;
     let i = 0;
     let dayIndex = 1 - index;
+    let today = +(new Date().getDate() + '' + new Date().getMonth() + '' + new Date().getFullYear());
+    let dayData = {id: 0, dayIndex: '', today: false};
 
     while (i < 37) {
-        tr.push(dayIndex > 0 && dayIndex <= diff ? dayIndex : "");
+        dayData.dayIndex = dayIndex > 0 && dayIndex <= diff ? dayIndex : "";
+        dayData.id = +(dayData.dayIndex + '' + month + '' + year);
+        dayData.today = dayData.id === today;
+        tr.push({...dayData});
         dayIndex++;
         i++;
     }
