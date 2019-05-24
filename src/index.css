@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.calendar__day tr td{
+  position: relative;
+  padding: 10px;
+  width: calc(1300px / 7);
+  height: 60px;
+  background-color: rgba(255, 255, 255, .5);
+}
+.calendar__day tr td:hover{
+  background-color: rgba(84, 255, 100, 0.64);
+}
+.calendar__week tr td{
+  position: relative;
+  border: 1px black solid;
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: white;
+  text-align: center;
+}
+.calendar__table{
+  max-width:  1300px;
+  background-color: rgba(0, 0, 0, 0.16);
+  margin: 0 auto;
+}
+.calendar__menu{
+  max-width:  1300px;
+  background-color: red;
+  margin: 0 auto;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.calendar__day tr td .calendar__day-data{
+  color: rgba(0, 0, 0, 0.49);
+  font-size: 10px;
+  font-weight: bold;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top:0;
+  left: 3px;
+}
+tbody{
+
+  cursor: pointer;
+}
